@@ -46,17 +46,20 @@ const userFolders = [
   {
     id: nextId++,
     parentFolder: 'inbox',
-    name: 'Папка 1'
+    name: 'Папка 1',
+    type: nextId++,
   },
   {
     id: nextId++,
     parentFolder: 'inbox',
-    name: 'Папка 2'
+    name: 'Папка 2',
+    type: nextId++,
   },
   {
     id: nextId++,
     parentFolder: 'inbox',
-    name: 'Папка 3'
+    name: 'Папка 3',
+    type: nextId++,
   },
 ]
 
@@ -76,7 +79,7 @@ router.get('/api/folders', async (ctx, next) => {
 });
 
 router.get('/api/user-folders', async (ctx, next) => {
-  const body = userFolders.map(o => ({id: o.id, name: o.name, parentFolder: o.parentFolder}))
+  const body = userFolders.map(o => ({id: o.id, name: o.name, parentFolder: o.parentFolder, type: o.type}))
   return fortune(ctx, body);
 });
 
@@ -92,7 +95,7 @@ router.post('/api/user-folders', async (ctx, next) => {
       return fortune(ctx, null, 204);
   }
   
-  userFolders.push({ ...ctx.request.body, id: nextId++ });
+  userFolders.push({ ...ctx.request.body, id: nextId++, type: nextId++ });
   const status = 204;
   return fortune(ctx, null, status);
 });
