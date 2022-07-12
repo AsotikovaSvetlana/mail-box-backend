@@ -42,8 +42,7 @@ const folders = [
   },
 ];
 
-const userFoldersId = 1;
-
+let userFoldersId = 1;
 const userFolders = [
   {
     id: userFoldersId++,
