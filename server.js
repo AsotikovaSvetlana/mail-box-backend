@@ -48,19 +48,19 @@ const userFolders = [
     id: userFoldersId++,
     parentFolder: 'inbox',
     name: 'Папка 1',
-    type: userFoldersId++,
+    type: userFoldersId,
   },
   {
     id: userFoldersId++,
     parentFolder: 'inbox',
     name: 'Папка 2',
-    type: userFoldersId++,
+    type: userFoldersId,
   },
   {
     id: userFoldersId++,
     parentFolder: 'inbox',
     name: 'Папка 3',
-    type: userFoldersId++,
+    type: userFoldersId,
   },
 ]
 
@@ -310,6 +310,35 @@ router.get('/api/messages/:id', async (ctx, next) => {
   }
   const body = messages[index];
   return fortune(ctx, body);
+});
+
+router.post('/api/messages', async (ctx, next) => {
+  const id = ctx.request.body.id;
+  if (id) {
+      const index = messages.findIndex(o => o.id === id);
+      if (index === -1) {
+          const status = 404;
+          return fortune(ctx, null, status);
+      }
+      messages[index] = ctx.request.body;
+      return fortune(ctx, null, 204);
+  }
+  
+  messages.push({ ...ctx.request.body, id: messageId++ });
+  const status = 204;
+  return fortune(ctx, null, status);
+});
+
+router.delete('/api/messages/:id', async (ctx, next) => {
+  const id = Number(ctx.params.id);
+  const index = messages.findIndex(o => o.id === id);
+  if (index === -1) {
+      const status = 404;
+      return fortune(ctx, null, status);
+  }
+  messages.splice(index, 1);
+  const status = 204;
+  return fortune(ctx, null, status);
 });
 
 app.use(router.routes());
