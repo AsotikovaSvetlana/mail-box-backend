@@ -124,7 +124,7 @@ const messages = [
     type: "inbox",
     date: '2022-05-07',
     userFolder: 'Папка 1',
-    isRead: true,
+    isRead: false,
   },
   {
     id: messageId++,
@@ -143,7 +143,6 @@ const messages = [
     message: "quia molestiae reprehenderit quasi aspernatur\naut expedita occaecati aliquam eveniet laudantium\nomnis quibusdam delectus saepe quia accusamus maiores nam est\ncum et ducimus et vero voluptates excepturi deleniti ratione",
     type: "draft",
     date: '2022-07-04',
-    isRead: true,
   },
   {
     id: messageId++,
@@ -152,7 +151,6 @@ const messages = [
     message: "non et atque\noccaecati deserunt quas accusantium unde odit nobis qui voluptatem\nquia voluptas consequuntur itaque dolor\net qui rerum deleniti ut occaecati",
     type: "draft",
     date: '2022-01-12',
-    isRead: false,
   },
   {
     id: messageId++,
@@ -161,7 +159,6 @@ const messages = [
     message: "harum non quasi et ratione\ntempore iure ex voluptates in ratione\nharum architecto fugit inventore cupiditate\nvoluptates magni quo et",
     type: "draft",
     date: '2022-05-15',
-    isRead: true,
   },
   {
     id: messageId++,
@@ -170,7 +167,6 @@ const messages = [
     message: "doloribus at sed quis culpa deserunt consectetur qui praesentium\naccusamus fugiat dicta\nvoluptatem rerum ut voluptate autem\nvoluptatem repellendus aspernatur dolorem in",
     type: "draft",
     date: '2022-03-02',
-    isRead: false,
   },
   {
     id: messageId++,
@@ -224,7 +220,7 @@ const messages = [
     message: "expedita maiores dignissimos facilis\nipsum est rem est fugit velit sequi\neum odio dolores dolor totam\noccaecati ratione eius rem velit",
     type: "spam",
     date: '2021-12-25',
-    isRead: true,
+    isRead: false,
   },
   {
     id: messageId++,
@@ -234,7 +230,7 @@ const messages = [
     type: "inbox",
     date: '2021-03-25',
     userFolder: 'Папка 3',
-    isRead: true,
+    isRead: false,
   },
   {
     id: messageId++,
@@ -270,7 +266,7 @@ const messages = [
     message: "consequatur necessitatibus totam sed sit dolorum\nrecusandae quae odio excepturi voluptatum harum voluptas\nquisquam sit ad eveniet delectus\ndoloribus odio qui non labore",
     type: "inbox",
     date: '2021-10-10',
-    isRead: false,
+    isRead: true,
   },
   {
     id: messageId++,
@@ -279,7 +275,6 @@ const messages = [
     message: "veritatis voluptates necessitatibus maiores corrupti\nneque et exercitationem amet sit et\nullam velit sit magnam laborum\nmagni ut molestias",
     type: "sent",
     date: '2021-11-11',
-    isRead: true,
   },
   {
     id: messageId++,
@@ -288,7 +283,7 @@ const messages = [
     message: "doloribus est illo sed minima aperiam\nut dignissimos accusantium tempore atque et aut molestiae\nmagni ut accusamus voluptatem quos ut voluptates\nquisquam porro sed architecto ut",
     type: "inbox",
     date: '2021-06-30',
-    isRead: false,
+    isRead: true,
   },
   {
     id: messageId++,
@@ -297,7 +292,6 @@ const messages = [
     message: "qui harum consequatur fugiat\net eligendi perferendis at molestiae commodi ducimus\ndoloremque asperiores numquam qui\nut sit dignissimos reprehenderit tempore",
     type: "sent",
     date: '2021-08-30',
-    isRead: true,
   },
 ]
 
