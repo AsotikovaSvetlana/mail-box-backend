@@ -301,6 +301,10 @@ const messages = [
   },
 ]
 
+router.get('/api/messages', async (ctx, next) => {
+  return fortune(ctx, messages);
+});
+
 router.get('/api/messages/:id', async (ctx, next) => {
   const id = Number(ctx.params.id);
   const index = messages.findIndex(o => o.id === id);
