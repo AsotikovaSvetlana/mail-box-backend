@@ -46,21 +46,18 @@ let userFoldersId = 1;
 const userFolders = [
   {
     id: userFoldersId++,
-    parentFolder: 'inbox',
     name: 'Папка 1',
-    type: userFoldersId,
+    type: 'userFolder',
   },
   {
     id: userFoldersId++,
-    parentFolder: 'inbox',
     name: 'Папка 2',
-    type: userFoldersId,
+    type: 'userFolder',
   },
   {
     id: userFoldersId++,
-    parentFolder: 'inbox',
     name: 'Папка 3',
-    type: userFoldersId,
+    type: 'userFolder',
   },
 ]
 
