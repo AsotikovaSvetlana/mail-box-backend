@@ -93,7 +93,7 @@ router.post('/api/user-folders', async (ctx, next) => {
       return fortune(ctx, null, 204);
   }
   
-  userFolders.push({ ...ctx.request.body, id: userFoldersId++, type: userFoldersId++ });
+  userFolders.push({ ...ctx.request.body, id: userFoldersId++, type: 'userFolder' });
   const status = 204;
   return fortune(ctx, null, status);
 });
@@ -118,7 +118,7 @@ const messages = [
     name: "Eliseo",
     email: "Eliseo@gardner.biz",
     message: "laudantium enim quasi est quidem magnam voluptate ipsam eos\ntempora quo necessitatibus\ndolor quam autem quasi\nreiciendis et nam sapiente accusantium",
-    type: "inbox",
+    type: "userFolder",
     date: '2022-05-07',
     userFolder: 'Папка 1',
     isRead: false,
@@ -128,7 +128,7 @@ const messages = [
     name: "Jayne Kuhic",
     email: "Jayne_Kuhic@sydney.com",
     message: "est natus enim nihil est dolore omnis voluptatem numquam\net omnis occaecati quod ullam at\nvoluptatem error expedita pariatur\nnihil sint nostrum voluptatem reiciendis et",
-    type: "inbox",
+    type: "userFolder",
     date: '2022-05-05',
     userFolder: 'Папка 2',
     isRead: true,
@@ -224,7 +224,7 @@ const messages = [
     name: "Kariane",
     email: "Kariane@jadyn.tv",
     message: "fuga eos qui dolor rerum\ninventore corporis exercitationem\ncorporis cupiditate et deserunt recusandae est sed quis culpa\neum maiores corporis et",
-    type: "inbox",
+    type: "userFolder",
     date: '2021-03-25',
     userFolder: 'Папка 3',
     isRead: false,
