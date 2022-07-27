@@ -5,7 +5,8 @@ const cors = require('koa2-cors');
 const koaBody = require('koa-body');
 
 const app = new Koa();
-app.use(cors());
+const config = {origin: 'http://localhost:3000'};
+app.use(cors(config));
 app.use(koaBody({ json: true }));
 
 let foldersId = 1;
