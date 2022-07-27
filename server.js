@@ -5,7 +5,7 @@ const cors = require('koa2-cors');
 const koaBody = require('koa-body');
 
 const app = new Koa();
-const config = {origin: 'http://localhost:3000'};
+const config = {origin: '*'};
 app.use(cors(config));
 app.use(koaBody({ json: true }));
 
@@ -339,6 +339,11 @@ router.delete('/api/messages/:id', async (ctx, next) => {
 
 app.use(router.routes());
 app.use(router.allowedMethods());
+app.use(async (ctx, next) => {
+  ctx.set('Access-Control-Allow-Origin', '*');
+  ctx.set('Access-Control-Allow-Methods', 'POST, GET, PUT, DELETE, OPTIONS');
+  await next();
+});
 
 const port = process.env.PORT || 7070;
 const server = http.createServer(app.callback());
