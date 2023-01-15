@@ -6,36 +6,5 @@
       "use": "@vercel/node"
     }
   ],
-  "routes": [
-    {
-      "src": "/api/folders",
-      "dest": "/index.js",
-      "methods": ["GET"]
-    },
-    {
-      "src": "/api/user-folders",
-      "dest": "/index.js",
-      "methods": ["GET", "POST", "DELETE"]
-    },
-    {
-      "src": "/api/user-folders/:id",
-      "dest": "/index.js",
-      "methods": ["DELETE"]
-    },
-    {
-      "src": "/api/messages",
-      "dest": "/index.js",
-      "methods": ["GET", "POST", "DELETE"]
-    },
-    {
-      "src": "/api/messages/:id",
-      "dest": "/index.js",
-      "methods": ["GET"]
-    },
-    {
-      "src": "/api/messages/:id",
-      "dest": "/index.js",
-      "methods": ["DELETE"]
-    }
-  ]
+  "routes": [{ "src": "/(.*)", "dest": "/index.js" }]
 }
