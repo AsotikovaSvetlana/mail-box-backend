@@ -3,10 +3,13 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "engines": {
+    "node": "14.x"
+  },
   "scripts": {
     "prestart": "npm install",
-    "start": "forever server.js",
-    "watch": "forever -w server.js"
+    "start": "forever index.js",
+    "watch": "forever -w index.js"
   },
   "keywords": [],
   "author": "",
