@@ -16,6 +16,36 @@
       "src": "/api/user-folders",
       "dest": "/index.js",
       "methods": ["GET"]
+    },
+    {
+      "src": "/api/user-folders",
+      "dest": "/index.js",
+      "methods": ["POST"]
+    },
+    {
+      "src": "/api/user-folders/:id",
+      "dest": "/index.js",
+      "methods": ["DELETE"]
+    },
+    {
+      "src": "/api/messages",
+      "dest": "/index.js",
+      "methods": ["GET"]
+    },
+    {
+      "src": "/api/messages/:id",
+      "dest": "/index.js",
+      "methods": ["GET"]
+    },
+    {
+      "src": "/api/messages",
+      "dest": "/index.js",
+      "methods": ["POST"]
+    },
+    {
+      "src": "/api/messages/:id",
+      "dest": "/index.js",
+      "methods": ["DELETE"]
     }
   ]
 }
